@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
-echo "recording"
+ENV=${1##*/}
+echo "recording $ENV"
 curl  -X POST -H "Content-type: application/json" \
 -d "{
       \"title\": \"$ENV-deploy of $PROJECT\",
